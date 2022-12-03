@@ -51,7 +51,7 @@
                 <button name="3.3" class="btn btn-success btn-block" data-sql="SELECT count(emp_id) AS 'Total_Employees' FROM salaries WHERE to_date = '9999-01-01' AND salary BETWEEN 90000 AND 90040 LIMIT 100" onClick="reply_click(this)">3.3</button>
                 <button name="3.4" class="btn btn-success btn-block" data-sql="SELECT e.last_name,first_name, s.salary FROM employees e INNER JOIN salaries s ON e.emp_id = s.emp_id WHERE  s.to_date = '9999-01-01' AND s.salary > 90000 GROUP BY e. last_name ORDER BY last_name DESC, first_name DESC LIMIT 100" onClick="reply_click(this)">3.4</button>
                 <button name="3.5" class="btn btn-success btn-block" data-sql="SELECT e.emp_id,first_name,last_name,s.salary,from_date,to_date FROM employees e INNER JOIN salaries s ON e.emp_id = s.emp_id WHERE e.emp_id = 10012 LIMIT 100" onClick="reply_click(this)">3.5</button>
-                <button name="3.6" class="btn btn-success btn-block" data-sql="SELECT e.emp_id,first_name,last_name,s.salary,from_date,to_date FROM employees e INNER JOIN salaries s ON e.emp_id = s.emp_id WHERE e.emp_id = 10012 LIMIT 100" onClick="reply_click(this)">3.6</button>
+
 
             
             
