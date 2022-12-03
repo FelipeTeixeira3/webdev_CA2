@@ -3,15 +3,15 @@
 
 <head>
     
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="SQLite Exercise" />
-    <meta name="author" content="Felipe Teixeira" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >
+    <meta name="description" content="SQLite Exercise">
+    <meta name="author" content="Felipe Teixeira">
     <title>Webdev CA2</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.css">
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" >
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
     <script>
         function reply_click(clicked_object) {
@@ -47,7 +47,7 @@
             </div>
             <div class="col-lg-2 order-1 mb-3 d-flex flex-column gap-2 mx-auto align-items-stretch">
                 <button name="3.1" class="btn btn-success btn-block" data-sql="SELECT d.dept_id,dept_name, e.gender, COUNT(gender) AS 'num_empGender'FROM employees e INNER JOIN dept_manager dm ON e.emp_id = dm.emp_id INNER JOIN departments d ON dm.dept_id = d.dept_id GROUP BY dept_name LIMIT 100" onClick = "reply_click(this)">3.1</button>
-                <button name="3.2" class="btn btn-success btn-block" data-sql="SELECT t.title, e.gender, AVG(salary) AS 'avg_salary' FROM salaries s INNER JOIN titles t ON s.emp_id = t.emp_id INNER JOIN employees e ON t.emp_id = e.emp_id WHERE t.title = 'Technique Leader' GROUP BY title; LIMIT 100" onClick="reply_click(this)">3.2</button>
+                <button name="3.2" class="btn btn-success btn-block" data-sql="SELECT t.title, e.gender, AVG(salary) AS 'avg_salary' FROM salaries s INNER JOIN titles t ON s.emp_id = t.emp_id INNER JOIN employees e ON t.emp_id = e.emp_id WHERE t.title = 'Technique Leader' GROUP BY title LIMIT 100" onClick="reply_click(this)">3.2</button>
                 <button name="3.3" class="btn btn-success btn-block" data-sql="SELECT count(emp_id) AS 'Total_Employees' FROM salaries WHERE to_date = '9999-01-01' AND salary BETWEEN 90000 AND 90040 LIMIT 100" onClick="reply_click(this)">3.3</button>
                 <button name="3.4" class="btn btn-success btn-block" data-sql="SELECT e.last_name,first_name, s.salary FROM employees e INNER JOIN salaries s ON e.emp_id = s.emp_id WHERE  s.to_date = '9999-01-01' AND s.salary > 90000 GROUP BY e. last_name ORDER BY last_name DESC, first_name DESC LIMIT 100" onClick="reply_click(this)">3.4</button>
                 <button name="3.5" class="btn btn-success btn-block" data-sql="SELECT e.emp_id,first_name,last_name,s.salary,from_date,to_date FROM employees e INNER JOIN salaries s ON e.emp_id = s.emp_id WHERE e.emp_id = 10012 LIMIT 100" onClick="reply_click(this)">3.5</button>
